@@ -1,0 +1,61 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/file1.css')}}">  
+    </head>
+<body>
+  <div class="header">
+    <h1>MACHINE LEARNING TOOL BOX</h1>
+</div>
+<br>
+<br>
+<div class="containerassum">
+  <h2>
+    Assumptions
+  </h2>
+  <ul>
+    <li>
+      The dataset that is taken is considered to be preprocessed. 
+
+
+    </li>
+    <li>
+      The file that we have taken is a text file of CSV format.
+
+    </li>
+    <li>
+      All the columns in the data set contain only integer values.
+    </li>
+  </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+</div>
+<div class="containfile">
+<form action="{{ url_for('uploader') }}" method="POST">
+
+  <br>
+  <br>
+  <label for="myfile">Select a file:</label>
+  
+        
+      <input type="file" name="filename" accept=".css/.txt"></input>
+      
+      <br>
+      <br>
+      <br>
+    
+    
+    <h3><b>Do you want to perform Regression or classification?</b></h3>
+    <input type="radio" name="algotype" value="Classification">Classification</input><br>
+    <input type="radio" name="algotype" value="Regression">Regression</input>
+    <br>
+  <br>
+  {%if filetxt==1%}
+    <p><h3>Please upload either CSV or txt file</h3></p>
+  {%endif%}
+    <button type="submit" value="submit">Upload</button>
+  
+  </div> 
+</form>
+</body>
+</html>
+  

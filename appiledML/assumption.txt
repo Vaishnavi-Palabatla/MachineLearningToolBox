@@ -1,0 +1,19 @@
+Automation Tool Box
+
+
+Documentation:
+
+Week-1:
+
+Assumptions:
+
+The dataset that is taken is considered to be preprocessed. 
+The file that we have taken is a text file of CSV format.
+All the columns in the data set contain only integer values.
+The last column value is considered to be y, which is a dependent variable.
+All columns other than the last one are considered as x.
+The relationship between response and feature variables is linear
+The considered dataset is a regression dataset
+The noise or random disturbance in the relationship between the independent variables and the dependent variable is the same across all values.
+There is no header, i.e. there are no column names.
+Alpha values and number of epochs can be user given.

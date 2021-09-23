@@ -1,0 +1,54 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/file1.css')}}"> 
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+      <div class="header">
+      <h1>MACHINE LEARNING TOOL BOX</h1>
+    </div>
+    <br>
+        {%block content%}
+        <h4>the R2 score is {{r2}}</h4>
+        <table class="table table-bordered table-hover table-striped" style="width: 75%; margin: auto;">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" colspan="3">For the given features</th>
+                <th scope="col">Predicted Values</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%if flag==1%}
+                {%for each,a in xy%}
+                <tr>
+                {%for i in each%}
+                <td>{{i}}</td>
+                {%endfor%}
+                <td>{{a}}</td>
+                </tr>
+                {%endfor%}
+              {%else%}
+                {%for each in xy%}
+                  <tr>
+                  {%for i in each%}
+                  <td>{{i}}</td>
+                  {%endfor%}
+                  {%endfor%}
+
+              {%endif%}
+              
+            </tbody>
+          </table>
+          {%if exitYes==1%}
+          <form action="{{ url_for('exitYN') }}" method="POST">
+          Do you want to exit?
+          <input type="radio" name="exit" value="yes">YES</input>
+          <input type="radio" name="exit" value="no">NO</input>
+
+          <button type="submit">enter</button>
+          </form>
+          {%endif%}
+        
+        {%endblock%}
+    </body>
+</html>

@@ -1,0 +1,32 @@
+.header{
+    /* margin-top:5%; */
+          /* margin-left:2%;
+          margin-right:2%; */
+        /* margin-bottom: 80%; */
+        height:20%;
+        text-align: center;
+        width:100%;
+        font-size:85%;
+        font-weight: 500;
+        background-color: #2590EB;
+        color:#FFFFFF;
+
+}
+.containerassum{
+    margin-left:25%;
+          margin-right:25%; 
+    background-color: aquamarine;
+    color:red;
+    border: 3px blue;
+
+}
+.containfile{
+    margin-left:15%;
+          margin-right:15%; 
+    background-color: aquamarine;
+    font-size: medium;
+    color:red;
+    border: 3px blue;
+
+
+}
